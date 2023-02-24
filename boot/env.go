@@ -6,7 +6,7 @@ import (
 )
 
 type EnvConf struct {
-	EnvType    string
+	EnvId      string
 	AppVersion string
 	DeployType string
 	InstanceId string
@@ -19,10 +19,10 @@ var Env *EnvConf
 
 func SetUpEnv() {
 	result := &EnvConf{}
-	if os.Getenv("ENV_TYPE") != "" {
-		result.EnvType = os.Getenv("ENV_TYPE")
+	if os.Getenv("ENV_ID") != "" {
+		result.EnvId = os.Getenv("ENV_ID")
 	} else {
-		result.EnvType = "dev"
+		result.EnvId = "dev"
 	}
 
 	if os.Getenv("APP_NAME") != "" {
