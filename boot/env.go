@@ -27,8 +27,6 @@ func SetUpEnv() {
 
 	if os.Getenv("APP_NAME") != "" {
 		result.AppName = os.Getenv("APP_NAME")
-	} else {
-		result.AppName = "write-sync"
 	}
 	result.Port = os.Getenv("PORT")
 	result.ConfSrv = os.Getenv("CONF_SRV")
